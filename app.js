@@ -5,7 +5,8 @@ Seu desafio é desenvolver uma versão do quiz que:
 
 - Aborda um tema diferente (não pode ser de filmes);
 - Tem um tema de cores diferente do que foi apresentado na aula;
-- Exibe na tela a pontuação que o usuário fez. Não há certo ou errado, apenas faça. Essa exibição de pontos é uma das implementações que faremos na próxima aula =D
+- Exibe na tela a pontuação que o usuário fez. Não há certo ou errado, apenas faça. 
+  Essa exibição de pontos é uma das implementações que faremos na próxima aula =D
 
 Independente se você já fez o quiz dos filmes enquanto acompanhava a aula, busque fazer esse exercício sem rever partes da aula.
 
@@ -15,10 +16,14 @@ Independente se você já fez o quiz dos filmes enquanto acompanhava a aula, bus
 
 const correctAnswers = ['C', 'A', 'C', 'B', 'C']
 const form = document.querySelector('form')
+const boxPoint = document.querySelector('.hiddenBoxPoint')
+const boxPouppop = document.querySelector('.box-poup-pop')
+const poupPop = document.querySelector('.box-points-oks')
+const button = document.querySelector('button')
 
 form.addEventListener('submit', event => {
     event.preventDefault()
-
+    event.stopPropagation()
     let score = 0
 
     const userAnswers = [
@@ -34,8 +39,15 @@ form.addEventListener('submit', event => {
             let lenghtArray = userAnswers.length
             score += 100 / Number(lenghtArray) 
         }
+        
     })
-    console.log(score)
+    boxPoint.classList.remove('hiddenBoxPoint')
+    boxPoint.classList.add('visibleBoxPoint')
+    // boxPoint.setAttribute('class','visibleBoxPoint')
+    poupPop.innerHTML = `<p> ${score} pontos </p>` 
+
+    console.log(event)
+    
 })
 
 

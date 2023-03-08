@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: rgba(38, 38, 38, 0.6);
+}
+
 header{
     background-image: url(1827379.jpg);
     background-color: #000000;
@@ -28,4 +32,60 @@ button:hover{
     background-color: aliceblue;
     transition: all 0800ms;
     color: #000000;
+}
+
+
+/*Poup pop de pontos*/
+
+.visibleBoxPoint{
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.596);
+    opacity: 10px;
+    color: aliceblue;
+    position: absolute;
+}
+
+.hiddenBoxPoint{
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.596);
+    opacity: 10px;
+    color: aliceblue;
+    position: absolute;
+}
+
+.box-poup-pop{
+    background-image: url(1895990.jpg);
+    background-size: cover;
+
+    width: 100%;
+    opacity: 10px;
+    border: 1px solid ;
+    border-radius: 10px;
+    border-style: none;
+    text-align: center;
+    width: 500px;
+    min-height: 250px;
+    
+}
+
+.box-points-oks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-points-oks p{
+    font-size: 35px;
 }
