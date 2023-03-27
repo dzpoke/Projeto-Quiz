@@ -14,7 +14,6 @@ Link do projeto finalizado: [DrHouse](https://github.com/dzpoke/Projeto-Quiz)
 >..
 
 
-
 ---
 ###### *Desafios do projeto*
 
