@@ -16,14 +16,25 @@ Independente se você já fez o quiz dos filmes enquanto acompanhava a aula, bus
 
 const correctAnswers = ['C', 'A', 'C', 'B', 'C']
 const form = document.querySelector('form')
-const boxPoint = document.querySelector('.hiddenBoxPoint')
-const boxPouppop = document.querySelector('.box-poup-pop')
-const poupPop = document.querySelector('.box-points-oks')
-const button = document.querySelector('button')
+const button = document.querySelector('.btn-global')
 
-form.addEventListener('submit', event => {
+const globalBox = document.querySelector('.global-box-poup-pop')
+const boxPouppop = document.querySelector('.box-poup-pop')
+const poupPoints = document.querySelector('.box-points')
+
+button.addEventListener('click', () => {
+    globalBox.style.display = 'block'
+
+    setTimeout(() => {
+        globalBox.style.display = 'none'
+    }, 5000)
+    
+ })
+
+ form.addEventListener('submit', event => {
     event.preventDefault()
     event.stopPropagation()
+    
     let score = 0
 
     const userAnswers = [
@@ -35,19 +46,14 @@ form.addEventListener('submit', event => {
     ]    
 
     userAnswers.forEach((userAnswer, index) => {
+        
         if(userAnswer === correctAnswers[index]){
             let lenghtArray = userAnswers.length
             score += 100 / Number(lenghtArray) 
         }
-        
     })
-    boxPoint.classList.remove('hiddenBoxPoint')
-    boxPoint.classList.add('visibleBoxPoint')
-    // boxPoint.setAttribute('class','visibleBoxPoint')
-    poupPop.innerHTML = `<p> ${score} pontos </p>` 
 
-    console.log(event)
-    
+    poupPoints.innerHTML = `<p class="userPoints" > ${score} pontos </p>` 
+
 })
-
 
