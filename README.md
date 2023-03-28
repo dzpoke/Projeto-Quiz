@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+# Projeto-Quiz
+Esse quiz é dedicado a série Dr House. Teste o que quanto você sabe sobre ela
+>>>>>>> b66c44a9bd4b2609cf38e16e7a519bcc65a47c85
 ## *Quiz: Dr.House*
 
 Link do projeto finalizado: [DrHouse](https://github.com/dzpoke/Projeto-Quiz)
@@ -26,4 +31,8 @@ Link do projeto finalizado: [DrHouse](https://github.com/dzpoke/Projeto-Quiz)
 
 ###### *Versão Final 1.0*
 
+<<<<<<< HEAD
 ![GitHub Logo](/img/wirefreme.png)
+=======
+![GitHub Logo](/img/wirefreme.png)
+>>>>>>> b66c44a9bd4b2609cf38e16e7a519bcc65a47c85
