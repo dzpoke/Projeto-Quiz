@@ -13,6 +13,7 @@ Independente se você já fez o quiz dos filmes enquanto acompanhava a aula, bus
 É importante que a sua versão do quiz seja feita apenas com o conteúdo que vimos até aqui.
 */
 
+// Variaveis globais
 
 const correctAnswers = ['C', 'A', 'C', 'B', 'C']
 const form = document.querySelector('form')
@@ -22,28 +23,41 @@ const globalBox = document.querySelector('.global-box-poup-pop')
 const boxPouppop = document.querySelector('.box-poup-pop')
 const poupPoints = document.querySelector('.box-points')
 
+
+// Invocao da Poup Pop
+
 button.addEventListener('click', () => {
     globalBox.style.display = 'block'
-
-    setTimeout(() => {
-        globalBox.style.display = 'none'
-    }, 5000)
-    
  })
+
+ // Interacao com o puop pop
+
+globalBox.addEventListener('click', event => {
+
+    const className =  event.target.classList[0]
+    const arrayClass = ['global-box-poup-pop']
+    const PoupPopTrue = arrayClass.some(arrayClas => arrayClas === className)
+    
+    if(PoupPopTrue){
+        globalBox.style.display = 'none'
+    }
+
+ })
+
+// Envio das respostas
 
  form.addEventListener('submit', event => {
     event.preventDefault()
-    event.stopPropagation()
+
+     const userAnswers = [
+         form.inputQuestion1.value,
+         form.inputQuestion2.value,
+         form.inputQuestion3.value,
+         form.inputQuestion4.value,
+         form.inputQuestion5.value
+     ]
     
     let score = 0
-
-    const userAnswers = [
-        form.inputQuestion1.value,
-        form.inputQuestion2.value,
-        form.inputQuestion3.value,
-        form.inputQuestion4.value,
-        form.inputQuestion5.value
-    ]    
 
     userAnswers.forEach((userAnswer, index) => {
         

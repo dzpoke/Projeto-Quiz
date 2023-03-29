@@ -48,24 +48,28 @@ header{
 /*Poup pop de pontos*/
 
 .global-box-poup-pop{
-    background-image: url(img/popupPoints.jpg);
-    background-size: cover;
+    background: rgb(0, 0, 0, .5);
     
-    display:none;
+    display: none;
     position: fixed;
     left: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    max-width: 600px;
-    height: 300px;
-    margin: 20% auto;
-    border-radius: 15px;
 }
 
 .box-poup-pop{
+    background-image: url(img/popupPoints.jpg);
+    background-size: cover;
+    
+    width: 100%;
+    max-width: 550px;
+    max-height: 100%;
+    height: 250px;
+    margin: 20% auto;
+    padding: 20px;
     text-align: center;
-    position: relative;
+    border-radius: 10px;
 }
 
 .userPoints{
